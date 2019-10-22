@@ -77,6 +77,7 @@ void radio_loop() {
           len = sizeof(FINAL);
           rf69.send(FINAL, len);
           rf69.waitPacketSent();
+          SerialMon.println("Secret unlocked!");
           delay(TX_DELAY);
 
 #ifdef RADIO_DEBUG

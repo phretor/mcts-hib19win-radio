@@ -28,7 +28,7 @@
 #define SOFTWARE_SERIAL_MODEM_TX 8
 #define SOFTWARE_SERIAL_MODEM_RX 9
 
-#define RADIO_DEBUG
+//#define RADIO_DEBUG
 
 #define SYNCWORD "\x2d\xd4"
 #define PAYLOAD "Ich4ng3d"

@@ -17,31 +17,22 @@ Per gestire il gioco vi servirà anche l'applicazione web: [https://github.com/p
 2. Collegarlo al computer ed assicurarsi che la porta seriale sia vista correttamente:
 ```bash
 $ pio device list
-/dev/cu.Bluetooth-Incoming-Port
--------------------------------
-Hardware ID: n/a
-Description: n/a
 
-/dev/cu.FedericosAirPods-Wirele-3
----------------------------------
-Hardware ID: n/a
-Description: n/a
-
-/dev/cu.raspberrypi-SerialPort
-------------------------------
-Hardware ID: n/a
-Description: n/a
+...
 
 /dev/cu.usbmodem14101           <- questa
 ---------------------
 Hardware ID: USB VID:PID=239A:800C LOCATION=20-1
 Description: Feather 32u4
+
+...
 ```
 
 3. Compilare il firmware:
 ```bash
 $ git clone https://github.com/phretor/mcts-hib19win-radio
 $ cd mcts-hib19win-radio
+$ make deps
 $ make
 ```
 4. Caricare il firmware sulla scheda:

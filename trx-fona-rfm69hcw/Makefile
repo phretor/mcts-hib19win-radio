@@ -2,6 +2,9 @@ SHELL := /bin/bash
 
 all: build
 
+deps:
+	pio lib install RadioHead TinyGSM PubSubClient
+
 build:
 	pio -f -c vim run
 
