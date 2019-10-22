@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<fuzz_profile>
+   <modulators>
+      <modulator _Modulator__bits_per_symbol="1" carrier_amplitude="1" carrier_freq_hz="41110.992431640625" carrier_phase_deg="0" gauss_bt="0.5" gauss_filter_width="1" index="0" modulation_type="ASK" name="Modulator" parameters="0.0,100.0" sample_rate="1000000.0" samples_per_symbol="2484"/>
+   </modulators>
+   <decodings>
+      <decoding>'Non Return To Zero (NRZ)', </decoding>
+      <decoding>'Non Return To Zero Inverted (NRZ-I)', 'Invert', </decoding>
+      <decoding>'Manchester I', 'Edge Trigger', </decoding>
+      <decoding>'Manchester II', 'Edge Trigger', 'Invert', </decoding>
+      <decoding>'Differential Manchester', 'Edge Trigger', 'Differential Encoding', </decoding>
+   </decodings>
+   <participants>
+      <participant address_hex="" color_index="0" id="9518a792-9768-475d-84cd-7a99adb9efa3" name="Alice" relative_rssi="0" shortname="A" simulate="0"/>
+      <participant address_hex="" color_index="1" id="f68cb89f-cf68-46da-a6c2-a615e3656c5c" name="Bob" relative_rssi="1" shortname="B" simulate="0"/>
+   </participants>
+   <messages>
+      <message bits="10101010101010101010101010101010001011011101010000100110111111111111111100000000000000000100100001001001010000100011001000110000001100010011100101010111011010010110111001011111010010000110010101101100011011000110111101011111010110110100100101000100001110100100100101100011011010000011010001101110011001110011001101100100010111010100010101001111010100000" decoding_index="0" message_type_id="44ca824c-cb8b-4b06-b141-150e3027092e" modulator_index="0" pause="11915" timestamp="1571747639.534332">
+         <message_type assigned_by_logic_analyzer="0" assigned_by_ruleset="0" id="44ca824c-cb8b-4b06-b141-150e3027092e" name="Default">
+            <label apply_decoding="True" auto_created="False" color_index="0" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="32" fuzz_me="2" fuzz_values="" name="preamble" show="2" start="0"/>
+            <label apply_decoding="True" auto_created="False" color_index="1" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="48" fuzz_me="2" fuzz_values="" name="synchronization" show="2" start="32"/>
+            <label apply_decoding="True" auto_created="False" color_index="2" display_bit_order_index="0" display_endianness="big" display_format_index="3" end="56" fuzz_me="2" fuzz_values="" name="length" show="2" start="48"/>
+            <label apply_decoding="True" auto_created="False" color_index="3" display_bit_order_index="0" display_endianness="big" display_format_index="1" end="72" fuzz_me="2" fuzz_values="" name="destination address" show="2" start="56"/>
+            <label apply_decoding="True" auto_created="False" color_index="4" display_bit_order_index="0" display_endianness="big" display_format_index="1" end="88" fuzz_me="2" fuzz_values="" name="source address" show="2" start="72"/>
+            <label apply_decoding="True" auto_created="False" color_index="5" display_bit_order_index="0" display_endianness="big" display_format_index="3" end="352" fuzz_me="2" fuzz_values="" name="data" show="2" start="88"/>
+            <ruleset mode="0"/>
+         </message_type>
+      </message>
+   </messages>
+</fuzz_profile>

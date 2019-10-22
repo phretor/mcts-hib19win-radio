@@ -1,0 +1,62 @@
+<UniversalRadioHackerProject broadcast_address_hex="ffff" collapse_project_tabs="0" description="I used offset tuning to receive without DC noise, tuning at 443.900MHz with a 100kHZ offset.###~~~***~~~###_--:;;-__***~~~######~~~***~~~###_--:;;-__***~~~###For the generated signal, I created the correct packet as expected by the node when in receive mode." modulation_was_edited="1">
+  <modulators>
+    <modulator _Modulator__bits_per_symbol="1" carrier_amplitude="1" carrier_freq_hz="41110.992431640625" carrier_phase_deg="0" gauss_bt="0.5" gauss_filter_width="1" index="0" modulation_type="ASK" name="Modulator" parameters="0.0,100.0" sample_rate="1000000.0" samples_per_symbol="2484" />
+  </modulators>
+  <device_conf>
+    <apply_dc_correction>True</apply_dc_correction>
+    <bandwidth>1500000.0</bandwidth>
+    <freq_correction>1</freq_correction>
+    <frequency>443900000.0</frequency>
+    <gain>20</gain>
+    <name>BladeRF</name>
+    <num_sending_repeats>10</num_sending_repeats>
+    <rx_antenna_index>-1</rx_antenna_index>
+    <rx_baseband_gain>16</rx_baseband_gain>
+    <rx_gain>1</rx_gain>
+    <rx_if_gain>20</rx_if_gain>
+    <sample_rate>2500000.0</sample_rate>
+    <tx_antenna_index>-1</tx_antenna_index>
+    <tx_baseband_gain>16</tx_baseband_gain>
+    <tx_gain>5</tx_gain>
+    <tx_if_gain>20</tx_if_gain>
+  </device_conf>
+  <simulator_rx_conf />
+  <simulator_tx_conf />
+  <signal bits_per_symbol="1" center="0.0106" center_spacing="1" filename="BladeRF-20191022_142415-443_9MHz-2_5MSps-1_5MHz.complex32s" message_length_divisor="1" modulation_type="ASK" name="BladeRF-20191022_142415-443_9MHz-2_5MSps-1_5MHz" noise_maximum="366.0879189925967" noise_minimum="-366.0879189925967" noise_threshold="366.0879189925967" pause_threshold="0" sample_rate="1000000.0" samples_per_symbol="2484" tolerance="0">
+    <messages />
+  <messages /></signal>
+  <open_file name="BladeRF-20191022_142415-443_9MHz-2_5MSps-1_5MHz.complex32s" position="0" />
+  <group id="0" name="TX">
+    <cf_protocol filename="BladeRF-20191022_142415-443_9MHz-2_5MSps-1_5MHz.complex32s" />
+  </group>
+  <protocol>
+    <decodings>
+      <decoding>'Non Return To Zero (NRZ)', </decoding>
+      <decoding>'Non Return To Zero Inverted (NRZ-I)', 'Invert', </decoding>
+      <decoding>'Manchester I', 'Edge Trigger', </decoding>
+      <decoding>'Manchester II', 'Edge Trigger', 'Invert', </decoding>
+      <decoding>'Differential Manchester', 'Edge Trigger', 'Differential Encoding', </decoding>
+    </decodings>
+    <participants>
+      <participant address_hex="" color_index="0" id="9518a792-9768-475d-84cd-7a99adb9efa3" name="Alice" relative_rssi="0" shortname="A" simulate="0" />
+      <participant address_hex="" color_index="1" id="f68cb89f-cf68-46da-a6c2-a615e3656c5c" name="Bob" relative_rssi="1" shortname="B" simulate="0" />
+    </participants>
+    <messages>
+      <message decoding_index="0" message_type_id="44ca824c-cb8b-4b06-b141-150e3027092e" modulator_index="0" pause="11915" timestamp="1571747544.577213" />
+    </messages>
+    <message_types>
+      <message_type assigned_by_logic_analyzer="0" assigned_by_ruleset="0" id="44ca824c-cb8b-4b06-b141-150e3027092e" name="Default">
+        <label apply_decoding="True" auto_created="False" color_index="0" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="32" fuzz_me="2" fuzz_values="" name="preamble" show="2" start="0" />
+        <label apply_decoding="True" auto_created="False" color_index="1" display_bit_order_index="0" display_endianness="big" display_format_index="0" end="48" fuzz_me="2" fuzz_values="" name="synchronization" show="2" start="32" />
+        <label apply_decoding="True" auto_created="False" color_index="2" display_bit_order_index="0" display_endianness="big" display_format_index="3" end="56" fuzz_me="2" fuzz_values="" name="length" show="2" start="48" />
+        <label apply_decoding="True" auto_created="False" color_index="3" display_bit_order_index="0" display_endianness="big" display_format_index="1" end="72" fuzz_me="2" fuzz_values="" name="destination address" show="2" start="56" />
+        <label apply_decoding="True" auto_created="False" color_index="4" display_bit_order_index="0" display_endianness="big" display_format_index="1" end="88" fuzz_me="2" fuzz_values="" name="source address" show="2" start="72" />
+        <label apply_decoding="True" auto_created="False" color_index="5" display_bit_order_index="0" display_endianness="big" display_format_index="3" end="352" fuzz_me="2" fuzz_values="" name="data" show="2" start="88" />
+        <ruleset mode="0" />
+      </message_type>
+    </message_types>
+  </protocol>
+  <simulator_config>
+    <items />
+  </simulator_config>
+</UniversalRadioHackerProject>
